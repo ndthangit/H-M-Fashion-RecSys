@@ -243,6 +243,10 @@ def calc_embd_similarity(
     """
     # * maybe add embedding statistic info like std, mean, etc?
     
+    # If embeddings are missing (None) or empty, return zero similarity vector
+    if user_embd is None or item_embd is None:
+        return np.zeros(candidate.shape[0])
+
     sim = np.zeros(candidate.shape[0])
     batch_size = 10000
     for batch in tqdm(range(0, candidate.shape[0], batch_size)):
