@@ -360,13 +360,13 @@ class DataHelper:
         OSError
             If the directory does not exist.
         """
-        path = self.base / "processed" / name
+        path = "/workspaces/H-M-Fashion-RecSys/notebooks/data/processed/encoded_full"
         if not os.path.exists(path):
             raise OSError(f"{path} does not exist.")
         data = {}
-        data["user"] = pd.read_parquet(path / "user.pqt")
-        data["item"] = pd.read_parquet(path / "item.pqt")
-        data["inter"] = pd.read_parquet(path / "inter.pqt")
+        data["user"] = pd.read_parquet(f'{path}/user.pqt')
+        data["item"] = pd.read_parquet(f'{path}/item.pqt')
+        data["inter"] = pd.read_parquet(f'{path}/inter.pqt')
 
         return data
 

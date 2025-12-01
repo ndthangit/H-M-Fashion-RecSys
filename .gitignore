@@ -92,4 +92,6 @@ target/
 *.model
 *.h5
 
-notebooks/models/
+/notebooks/models/
+
+/notebooks/data/
