@@ -342,7 +342,7 @@ class DataHelper:
         data["item"].to_parquet(path / "item.pqt")
         data["inter"].to_parquet(path / "inter.pqt")
 
-    def load_data(self, name: str) -> dict:
+    def load_data(self, name: str, load_path= None) -> dict:
         """Load data dictionary from parquet.
 
         Parameters
@@ -360,7 +360,7 @@ class DataHelper:
         OSError
             If the directory does not exist.
         """
-        path = self.base / "processed" / name
+        path = self.base / "processed" / name if load_path is None else load_path
         # if not os.path.exists(path):
         #     raise OSError(f"{path} does not exist.")
         data = {}
