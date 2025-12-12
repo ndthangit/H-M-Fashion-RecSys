@@ -1,0 +1,5 @@
+Collecting pyarrow
+  Using cached pyarrow-22.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.2 kB)
+Using cached pyarrow-22.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (47.7 MB)
+Installing collected packages: pyarrow
+Successfully installed pyarrow-22.0.0
